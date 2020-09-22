@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import fastClick from 'fastclick'
 // 解决link延迟问题
-import './assets/styles/reset.css'
+import fastClick from 'fastclick'
 // 样式保持同意
-import './assets/styles/border.css'
+import './assets/styles/reset.css'
 // 解决移动端1像素边框的问题
+import './assets/styles/border.css'
+// iconfont图标显示
+import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
