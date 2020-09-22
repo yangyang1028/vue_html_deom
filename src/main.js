@@ -11,9 +11,17 @@ import './assets/styles/reset.css'
 import './assets/styles/border.css'
 // iconfont图标显示
 import './assets/styles/iconfont.css'
+// 引入轮播图插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import style (>= Swiper 6.x)
+// import 'swiper/swiper-bundle.css'
+// import style (<= Swiper 5.x)
+// import 'swiper/css/swiper.css'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
