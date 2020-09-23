@@ -77,10 +77,11 @@ export default {
 <style lang="stylus" scoped>
 @import "~styles/varibles.styl"
 @import "~styles/mixins.styl"
-  .icons
-    overflow: hidden
+  .icons >>> .swiper-container
     height: 0
     padding-bottom: 50%
+  .icons
+    margin-top: .1rem
     .icon
       position: relative
       float: left
@@ -106,8 +107,8 @@ export default {
         left: 0
         right: 0
         bottom: 0
-        padding-left: .1rem
         line-height: .44rem
+        padding-left: .1rem
         text-align: center
         color: $textColr
         ellipsis()
