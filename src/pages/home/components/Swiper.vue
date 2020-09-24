@@ -22,16 +22,16 @@ export default {
       },
       swiperList: [{
         id: '001',
-        imgURL: require('@/assets/img/001.jpg')
+        imgURL: require('@img/001.jpg')
       }, {
         id: '002',
-        imgURL: require('@/assets/img/002.jpg')
+        imgURL: require('@img/002.jpg')
       }, {
         id: '003',
-        imgURL: require('@/assets/img/003.jpg')
+        imgURL: require('@img/003.jpg')
       }, {
         id: '004',
-        imgURL: require('@/assets/img/004.jpg')
+        imgURL: require('@img/004.jpg')
       }]
     }
   }

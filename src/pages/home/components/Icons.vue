@@ -20,39 +20,39 @@ export default {
     return {
       iconList: [{
         id: '001',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '002',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '003',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '004',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '005',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '006',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '007',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '008',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }, {
         id: '009',
-        imgURL: require('@/assets/img/icon_01.png'),
+        imgURL: require('@img/icon_01.png'),
         imgText: '旅游景点'
       }]
     }
