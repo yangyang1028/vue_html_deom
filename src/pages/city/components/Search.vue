@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl';
+@import '~styles/varibles.styl'
   .bgcolor
     background: $bgColor
     height: .74rem
