@@ -2,7 +2,7 @@
   <div>
     <div class="re-title">热销推荐</div>
     <ul>
-      <li class="re-item" v-for="item of recommendList" :key="item.id">
+      <li class="re-item" v-for="item of list" :key="item.id">
         <img class="re-img" :src="item.imgURL" />
         <div class="re-txt">
           <p class="re-txt-title">{{item.title}}</p>
@@ -21,28 +21,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgURL: require('@img/005.jpg'),
-        title: '著名景点',
-        text: '有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点',
-        money: '999'
-      }, {
-        id: '002',
-        imgURL: require('@img/005.jpg'),
-        title: '著名景点',
-        text: '有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点',
-        money: '999'
-      }, {
-        id: '003',
-        imgURL: require('@img/005.jpg'),
-        title: '著名景点',
-        text: '有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点',
-        money: '999'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

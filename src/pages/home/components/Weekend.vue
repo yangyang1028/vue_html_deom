@@ -2,7 +2,7 @@
   <div>
     <div class="re-title">周末畅游</div>
     <ul>
-      <li class="re-item" v-for="item of recommendList" :key="item.id">
+      <li class="re-item" v-for="item of list" :key="item.id">
         <div class="re-img-wrppor">
           <img class="re-img" :src="item.imgURL" />
         </div>
@@ -18,25 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgURL: require('@img/006.jpg'),
-        title: '著名景点',
-        text: '有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点'
-      }, {
-        id: '002',
-        imgURL: require('@img/006.jpg'),
-        title: '著名景点',
-        text: '有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点'
-      }, {
-        id: '003',
-        imgURL: require('@img/006.jpg'),
-        title: '著名景点',
-        text: '有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

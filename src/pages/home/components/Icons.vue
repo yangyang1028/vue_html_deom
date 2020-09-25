@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -16,51 +16,20 @@
 <script>
 export default {
   name: 'Icons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [{
-        id: '001',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '002',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '003',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '004',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '005',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '006',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '007',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '008',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }, {
-        id: '009',
-        imgURL: require('@img/icon_01.png'),
-        imgText: '旅游景点'
-      }]
+      swiperOption: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         // 以下算法是将数组转换为二维数组
         if (!pages[page]) {

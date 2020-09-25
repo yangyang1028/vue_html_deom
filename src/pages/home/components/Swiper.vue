@@ -1,8 +1,8 @@
 <template>
 <div class="swiper-div">
-   <swiper :options="swiperOption">
+   <swiper :options="swiperOption" v-if="showSwiper">
     <!-- slides -->
-    <swiper-slide v-for="item of swiperList" :key="item.id"><img class="swiper-img" :src="item.imgURL" /></swiper-slide>
+    <swiper-slide v-for="item of list" :key="item.id"><img class="swiper-img" :src="item.imgURL" /></swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
   </swiper>
@@ -12,27 +12,24 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         // 轮播图上的圆点
         pagination: '.swiper-pagination',
         // 轮播插件是否开启轮播
-        loop: true
-      },
-      swiperList: [{
-        id: '001',
-        imgURL: require('@img/001.jpg')
-      }, {
-        id: '002',
-        imgURL: require('@img/002.jpg')
-      }, {
-        id: '003',
-        imgURL: require('@img/003.jpg')
-      }, {
-        id: '004',
-        imgURL: require('@img/004.jpg')
-      }]
+        loop: true,
+        // disableOnInteraction: false,
+        autoplay: 3000
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }
