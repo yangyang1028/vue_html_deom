@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 // 解决link延迟问题
 import fastClick from 'fastclick'
-// 样式保持同意
+// 样式保持统一
 import './assets/styles/reset.css'
 // 解决移动端1像素边框的问题
 import './assets/styles/border.css'
@@ -17,6 +17,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import 'swiper/swiper-bundle.css'
 // import style (<= Swiper 5.x)
 // import 'swiper/css/swiper.css'
+// 引入swiper轮播插件
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false

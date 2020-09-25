@@ -7,10 +7,12 @@
     <span class="iconfont">&#xe616;</span>
     输入城市/景点/游玩主题
   </div>
-  <div class="header-right">
-    {{this.city}}
-    <span class="iconfont rigth-icon">&#xe688;</span>
-  </div>
+  <router-link to="/city">
+    <div class="header-right">
+      {{this.city}}
+      <span class="iconfont rigth-icon">&#xe688;</span>
+    </div>
+  </router-link>
 </div>
 </template>
 
@@ -35,12 +37,12 @@ lang="stylus":使用stylus编写样式
 @import "~styles/varibles.styl";
   .header
     display: flex
-    line-height : .86rem
+    line-height : $height
     background: $bgColor
     color: #fff
     .left-icon
       text-align: center
-      font-size: .4rem
+      font-size: $iconFontSize
     .header-left
       width: .64rem
       float:left
@@ -58,6 +60,7 @@ lang="stylus":使用stylus编写样式
       width: 1.24rem
       float:right
       text-align: center
+      color: #fff
       .rigth-icon
         margin-left: -.04rem
         font-size: .24rem
