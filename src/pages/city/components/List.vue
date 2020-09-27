@@ -17,7 +17,12 @@
           </div>
         </div>
       </div>
-      <div class="ares" v-for="(item,key) of cities" :key="key">
+      <div
+        class="ares"
+        v-for="(item,key) of cities"
+        :key="key"
+        :ref="key"
+      >
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list" v-for="innerItem of item" :key="innerItem.id">
           <div class="list border-bottom">{{innerItem.name}}</div>
@@ -33,12 +38,22 @@ export default {
   name: 'CityList',
   props: {
     hot: Array,
-    cities: Object
+    cities: Object,
+    letter: String
   },
   mounted () {
     setTimeout(() => {
       this.scroll = new Bscroll(this.$refs.wrapper)
     }, 0)
+  },
+  watch: {
+    letter () {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        // 可以让元素滚动到当前element的位置
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>
