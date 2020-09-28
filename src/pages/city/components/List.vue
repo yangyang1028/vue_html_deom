@@ -44,7 +44,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.scroll = new Bscroll(this.$refs.wrapper)
-    }, 200)
+    }, 100)
   },
   watch: { // 监听属性事件
     letter () {
