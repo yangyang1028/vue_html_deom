@@ -8,9 +8,10 @@
         v-model="keyworld"
       >
     </div>
-    <div class="search-content" ref="search">
+    <div class="search-content" ref="search" v-show="keyworld">
       <ul>
         <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
       </ul>
     </div>
   </div>
@@ -28,6 +29,11 @@ export default {
       keyworld: '',
       list: [],
       timer: null
+    }
+  },
+  computed: {
+    hasNoData () {
+      return !this.list.length
     }
   },
   watch: {
@@ -51,8 +57,13 @@ export default {
       }, 100)
     }
   },
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.search)
+  updated () {
+    console.log('生命钩子')
+    // 虚拟DOM重新渲染和修补之前，数据更新之后，会执行两次
+    this.scroll = new Bscroll(this.$refs.search)// 不管用
+    // setTimeout(() => {
+    // this.scroll = new Bscroll(this.$refs.search)
+    // }, 500)
   }
 }
 </script>
@@ -81,7 +92,7 @@ export default {
     bottom:0
     background: #eee
     .search-item
-      line-height: .62rem
+      line-height: .64rem
       padding-left: .2rem
       color: #666
       background: #fff
