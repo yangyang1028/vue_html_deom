@@ -71,8 +71,13 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => {
-      this.scroll = new Bscroll(this.$refs.wrapper)
+    // this.scroll = new Bscroll(this.$refs.wrapper, {
+    //   click: true
+    // })
+    setTimeout(() => { // 需要延迟才能刷新出数据，分析出数据高度
+      this.scroll = new Bscroll(this.$refs.wrapper, {
+        click: true
+      })
     }, 100)
   }
 }

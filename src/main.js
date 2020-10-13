@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // 解决link延迟问题
-import fastClick from 'fastclick'
+// import fastClick from 'fastclick' // 解决不了300毫秒延迟问题，该方法已经过时
 import store from './store/index'
 // 样式保持统一
 import './assets/styles/reset.css'
@@ -22,7 +22,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
-fastClick.attach(document.body)
+// fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
