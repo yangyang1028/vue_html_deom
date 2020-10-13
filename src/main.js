@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 // 解决link延迟问题
 import fastClick from 'fastclick'
+import store from './store/index'
 // 样式保持统一
 import './assets/styles/reset.css'
 // 解决移动端1像素边框的问题
@@ -28,6 +29,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

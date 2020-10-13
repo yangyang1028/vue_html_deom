@@ -17,10 +17,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    /*
+    mapState 是指将 vuex 中的数据映射到该组件的 computed计算属性 中。
+
+    例：是指将 city 这个公用属性映射到 city 计算属性中
+    */
+    ...mapState(['city'])
   }
 }
 </script>
@@ -57,7 +63,8 @@ lang="stylus":使用stylus编写样式
       border-radius: .1rem
       color: #ccc
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
+      padding: 0 .1rem
       float:right
       text-align: center
       color: #fff

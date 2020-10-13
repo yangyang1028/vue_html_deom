@@ -10,7 +10,7 @@
     </div>
     <div class="search-content" ref="search" v-show="keyworld">
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="cityClick(item.name)">{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
       </ul>
     </div>
@@ -19,6 +19,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import { mapMutations } from 'vuex'
 export default {
   name: 'CitySearch',
   props: {
@@ -58,12 +59,20 @@ export default {
     }
   },
   updated () {
-    console.log('生命钩子')
+    // console.log('生命钩子')
     // 虚拟DOM重新渲染和修补之前，数据更新之后，会执行两次
     this.scroll = new Bscroll(this.$refs.search)// 不管用
     // setTimeout(() => {
     // this.scroll = new Bscroll(this.$refs.search)
     // }, 500)
+  },
+  methods: {
+    cityClick (city) {
+      // this.$store.commit('changeCity', city)
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
   }
 }
 </script>

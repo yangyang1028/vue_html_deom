@@ -1,7 +1,6 @@
 {
   "res" : true,
   "data" : {
-      "city":"北京",
       "swiperList": [{
         "id": "001",
         "imgURL": "/static/img/001.jpg"
