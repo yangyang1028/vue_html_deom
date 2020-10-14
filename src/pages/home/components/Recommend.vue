@@ -2,7 +2,7 @@
   <div>
     <div class="re-title">热销推荐</div>
     <ul>
-      <li class="re-item" v-for="item of list" :key="item.id">
+      <router-link tag="li" :to="'/detali/' + item.id" class="re-item" v-for="item of list" :key="item.id">
         <img class="re-img" :src="item.imgURL" />
         <div class="re-txt">
           <p class="re-txt-title">{{item.title}}</p>
@@ -13,7 +13,7 @@
             <span>起</span>
           </p>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
