@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="banner" @click="swiperOn">
-      <img class="banner-img" src="static/img/002.jpg">
+      <img class="banner-img" :src="bannerImg">
       <div class="banner-info">
-        <div class="banner-title">著名景区</div>
+        <div class="banner-title">{{this.sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe70a;</span>
-          39
+          {{this.gallaryImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="bannerSwiper" @close="swiperOff"></common-gallary>
+    <common-gallary :imgs="gallaryImgs" v-show="bannerSwiper" @close="swiperOff"></common-gallary>
   </div>
 </template>
 
@@ -18,10 +18,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'Banner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   data () {
     return {
-      bannerSwiper: false,
-      imgs: ['static/img/002.jpg', 'static/img/003.jpg']
+      bannerSwiper: false
     }
   },
   components: {
