@@ -20,6 +20,9 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import 'swiper/css/swiper.css'
 // 引入swiper轮播插件
 import 'swiper/dist/css/swiper.css'
+// import 'swiper/swiper-bundle.css'
+// 低版本兼容ES6的问题
+import 'babel-polyfill'
 
 Vue.config.productionTip = false
 // fastClick.attach(document.body)

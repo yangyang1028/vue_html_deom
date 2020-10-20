@@ -10,7 +10,11 @@
     </div>
     <div class="search-content" ref="search" v-show="keyworld">
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="cityClick(item.name)">{{item.name}}</li>
+        <li class="search-item border-bottom"
+          v-for="item of list"
+          :key="item.id"
+          @click="cityClick(item.name)"
+        >{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
       </ul>
     </div>
@@ -37,6 +41,16 @@ export default {
       return !this.list.length
     }
   },
+  methods: {
+    cityClick (city) {
+      // alert(' ')
+      // this.$store.commit('changeCity', city)
+      this.changeCity(city)
+      this.$router.push('/')
+      // alert(city)
+    },
+    ...mapMutations(['changeCity'])
+  },
   watch: {
     keyworld () {
       if (this.timer) {
@@ -58,21 +72,17 @@ export default {
       }, 100)
     }
   },
-  updated () {
+  mounted () {
+    // pc 模拟测试 不滚动， 真机测试 可以滚动
+    // 使用mounted 不滚动 ， 使用updated 执行两次，点击出问题
     // console.log('生命钩子')
     // 虚拟DOM重新渲染和修补之前，数据更新之后，会执行两次
-    this.scroll = new Bscroll(this.$refs.search)// 不管用
+    this.scroll = new Bscroll(this.$refs.search, {
+      click: true
+    })
     // setTimeout(() => {
     // this.scroll = new Bscroll(this.$refs.search)
-    // }, 500)
-  },
-  methods: {
-    cityClick (city) {
-      // this.$store.commit('changeCity', city)
-      this.changeCity(city)
-      this.$router.push('/')
-    },
-    ...mapMutations(['changeCity'])
+    // }, 200)
   }
 }
 </script>
