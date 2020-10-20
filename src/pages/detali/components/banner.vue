@@ -10,12 +10,15 @@
         </div>
       </div>
     </div>
-    <common-gallary :imgs="gallaryImgs" v-show="bannerSwiper" @close="swiperOff"></common-gallary>
+    <fade-animation>
+      <common-gallary :imgs="gallaryImgs" v-show="bannerSwiper" @close="swiperOff"></common-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/fade'
 export default {
   name: 'Banner',
   props: {
@@ -29,7 +32,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   methods: {
     swiperOn () {

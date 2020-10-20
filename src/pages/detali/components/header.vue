@@ -25,7 +25,9 @@ export default {
   },
   methods: {
     scrollClick () {
-      const top = document.documentElement.scrollTop
+      // const top = document.documentElement.scrollTop // 不兼容
+      // 兼容写法
+      const top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
       // console.log(top)
       if (top > 60) {
         let opacity = top / 140
@@ -37,10 +39,10 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.scrollClick)
   },
-  deactivated () { // 解绑全局事件
+  destroyed () { // 解绑全局事件
     window.removeEventListener('scroll', this.scrollClick)
   }
 }
