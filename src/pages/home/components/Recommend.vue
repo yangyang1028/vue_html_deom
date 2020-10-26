@@ -62,9 +62,7 @@ export default {
         font-size: .20rem
       .re-span span:nth-child(2)
         font-size: .40rem
-        margin-left: -.1rem
       .re-span span:nth-child(3)
-        font-size: .26rem
+        font-size: .20rem
         color: #ccc
-        margin-left: -.06rem
 </style>

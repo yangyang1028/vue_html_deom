@@ -19,7 +19,7 @@ export default new Router({
       // 当app.js非常庞大时，可以采用异步组件。
       // 异步组件 调用时会重新发送http请求
       // app.js很小时，不建议使用
-    }, {
+     }, {
       path: '/detali/:id', // 动态路由
       name: 'Detali',
       component: Detali

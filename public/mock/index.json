@@ -3,101 +3,101 @@
   "data" : {
       "swiperList": [{
         "id": "001",
-        "imgURL": "/static/img/001.jpg"
+        "imgURL": "/img/001.jpg"
       }, {
         "id": "002",
-        "imgURL": "/static/img/002.jpg"
+        "imgURL": "/img/002.jpg"
       }, {
         "id": "003",
-        "imgURL": "/static/img/003.jpg"
+        "imgURL": "/img/003.jpg"
       }, {
         "id": "004",
-        "imgURL": "/static/img/004.jpg"
+        "imgURL": "/img/004.jpg"
       }],
       "iconList": [{
         "id": "001",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "002",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "003",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "004",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "005",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "006",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "007",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "008",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }, {
         "id": "009",
-        "imgURL": "/static/img/icon_01.png",
+        "imgURL": "/img/icon_01.png",
         "imgText": "旅游景点"
       }],
       "recommendList": [{
         "id": "001",
-        "imgURL": "/static/img/005.jpg",
+        "imgURL": "/img/005.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点",
         "money": "999"
       }, {
         "id": "002",
-        "imgURL": "/static/img/005.jpg",
+        "imgURL": "/img/005.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点",
         "money": "999"
       }, {
         "id": "003",
-        "imgURL": "/static/img/005.jpg",
+        "imgURL": "/img/005.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点",
         "money": "999"
       }],
       "weekendList": [{
         "id": "001",
-        "imgURL": "/static/img/006.jpg",
+        "imgURL": "/img/006.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点"
       }, {
         "id": "002",
-        "imgURL": "/static/img/006.jpg",
+        "imgURL": "/img/006.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点"
       }, {
         "id": "003",
-        "imgURL": "/static/img/006.jpg",
+        "imgURL": "/img/006.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点"
       }, {
         "id": "004",
-        "imgURL": "/static/img/006.jpg",
+        "imgURL": "/img/006.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点"
       }, {
         "id": "005",
-        "imgURL": "/static/img/006.jpg",
+        "imgURL": "/img/006.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点"
       }, {
         "id": "006",
-        "imgURL": "/static/img/006.jpg",
+        "imgURL": "/img/006.jpg",
         "title": "著名景点",
         "text": "有山有水有树林,著名景点著名景点著名景点著名景点著名景点著名景点"
       }]
